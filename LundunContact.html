@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | John Lundun</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" id="Logo">
+        <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217916/Logo-removebg_yygqpd.png" alt="John Lundun Logo" />
+      </a>
+
+      <!-- Toggle button with spans for animation -->
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="LundunPortfolio.html">Works</a></li>
+        <li><a href="LundunContact.html" id="Selected">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <h1>Contact Me</h1>
+      <div class="contact-info">
+        <p><strong>Email:</strong> LundunJohn@gmail.com</p>
+        <p><strong>Phone:</strong> +27 76 086 6806</p>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://za.linkedin.com/in/john-lundun-9b357162" target="_blank">
+          <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217577/10464412_epaebr.png" alt="LinkedIn" />
+        </a>
+        <a href="https://www.instagram.com/johnlundun/" target="_blank">
+          <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217577/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand-b_rmltmy.png" alt="Instagram" />
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Lundun Inc.</p>
+  </footer>
+
+  <script>
+    // Scroll-hide nav
+    const nav = document.querySelector("nav");
+    let prevScrollPos = window.pageYOffset;
+
+    window.addEventListener("scroll", () => {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollPos < currentScrollPos && currentScrollPos > 50) {
+        // Scrolling down - hide nav
+        nav.style.top = "-200px";
+      } else {
+        // Scrolling up - show nav
+        nav.style.top = "0";
+      }
+      prevScrollPos = currentScrollPos;
+    });
+
+    // Toggle nav links on mobile
+    const toggleBtn = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggleBtn.addEventListener("click", () => {
+      toggleBtn.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>

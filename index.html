@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | John Lundun</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- ===== Navigation ===== -->
+    <header>
+      <nav>
+        <a href="index.html" id="Logo">
+          <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217916/Logo-removebg_yygqpd.png" alt="John Lundun Logo" />
+        </a>
+
+        <!-- Toggle button with spans for animation -->
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Nav links must have .nav-links class -->
+        <ul class="nav-links">
+          <li><a href="index.html" id="Selected">Home</a></li>
+          <li><a href="LundunPortfolio.html">Works</a></li>
+          <li><a href="LundunContact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== Headline ===== -->
+    <main>
+      <article class="Headline">
+        <h1>
+          John Lundun <br>
+          Award-Winning Music Composer & Producer for TV, Film, and Advertising
+        </h1>
+
+        <!-- ===== Film Section ===== -->
+        <section>
+          <h2>Film</h2>
+          <div class="gallery">
+            <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217847/Piano_Love_Piano_Love_Netflix_Movie_mjrfx1.png" alt="Poster for Piano Love Netflix Movie" />
+            <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217890/outlaws_S2_Showmax_Series_jytdw7.png" alt="Poster for Outlaws Season 2 Showmax Series" />
+            <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217906/Mkhize_to_Masemola_Showmax_Movie_ux08cr.png" alt="Poster for Mkhize to Masemola Showmax Movie" />
+          </div>
+        </section>
+
+        <!-- ===== Advertising Section ===== -->
+        <section>
+          <h2>Advertising</h2>
+          <div class="gallery">
+            <div>
+              <!--video autoplay loop controls muted>
+                <source src="https://drive.google.com/file/d/1BYcskVT0Pzc5-B9yA3Hpw_NXZ7lRbIqP/view?usp=drive_link" type="video/mp4" />
+              </video-->
+              <iframe width="350" height="200"
+            src="https://www.youtube.com/embed/xWyXW8s_Rp8"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+              </iframe>
+
+              <p>Game Advert 1</p>
+            </div>
+            <div>
+              <iframe width="350" height="200" src="https://www.youtube.com/embed/85_I3SGIY1o?si=08iMLSKXrKpJG92l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <p>Game Advert 2</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== Music Section ===== -->
+        <section>
+          <h2>Music</h2>
+          <div class="gallery">
+            <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217520/John_Lundun_-_Lo-Fiano_petvsw.jpg" alt="Album cover for John Lundun - Lo-Fiano" />
+            <img src="Website Files/Music Productiom, Mixing And Mastering/Kwesta ft Wale - Spirit.jpg" alt="Cover art for Kwesta ft Wale - Spirit" />
+            <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217519/NaakMusiq_ft_Bucie_-_Ntombi_gfdzq8.jpg" alt="Cover art for NaakMusiq ft Bucie - Ntombi" />
+          </div>
+        </section>
+
+        <!-- ===== Contact Button ===== -->
+        <a href="LundunContact.html" class="ContactBtn">Contact Me</a>
+      </article>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+      <p>&copy; 2026 Lundun Inc.</p>
+    </footer>
+
+  </div>
+
+  <!-- ===== Scroll-Hide Nav Script ===== -->
+  <script>
+    // Scroll-hide nav
+    const nav = document.querySelector("nav");
+    let prevScrollPos = window.pageYOffset;
+
+    window.addEventListener("scroll", () => {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollPos < currentScrollPos && currentScrollPos > 50) {
+        // Scrolling down - hide nav
+        nav.style.top = "-200px";
+      } else {
+        // Scrolling up - show nav
+        nav.style.top = "0";
+      }
+      prevScrollPos = currentScrollPos;
+    });
+
+    // Toggle nav links on mobile
+    const toggleBtn = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggleBtn.addEventListener("click", () => {
+      toggleBtn.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>

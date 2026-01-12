@@ -1,0 +1,380 @@
+/* ===== Global Styles ===== */
+:root {
+  --bg-color: #1a1a1a;        /* unified dark background */
+  --text-color: #ffffff;
+  --accent-color: #f59116;
+  --font-family: 'Segoe UI', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  background-image: url("https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217570/6045754_rknbx3.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+main {
+  flex: 1; /* allows main content to expand */
+}
+
+footer {
+  margin-top: auto; /* pushes footer to bottom */
+}
+
+/* ===== Navigation ===== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
+
+nav img {
+  max-width: 180px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+#Selected {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* ===== Headline Sections ===== */
+.Headline, .ContactHeadline {
+  text-align: center;
+  padding-top: 10rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.Headline h1, .ContactHeadline h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* ===== Gallery / Portfolio ===== */
+.gallery, .PortfolioContent, .Row1, .Row3, .VideoContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.gallery img, .PortfolioContent img,
+.gallery video, .PortfolioContent video,
+.Row1 img, .Row3 img, .Row2 video {
+  flex: 1 1 250px;
+  max-width: 300px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.gallery img:nth-child(1), .PortfolioContent img:nth-child(1),
+.gallery video:nth-child(1), .PortfolioContent video:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.gallery img:nth-child(2), .PortfolioContent img:nth-child(2),
+.gallery video:nth-child(2), .PortfolioContent video:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.gallery img:nth-child(3), .PortfolioContent img:nth-child(3),
+.gallery video:nth-child(3), .PortfolioContent video:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.gallery img:nth-child(4), .PortfolioContent img:nth-child(4),
+.gallery video:nth-child(4), .PortfolioContent video:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.gallery img:nth-child(5), .PortfolioContent img:nth-child(5),
+.gallery video:nth-child(5), .PortfolioContent video:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.gallery img:nth-child(n+6), .PortfolioContent img:nth-child(n+6),
+.gallery video:nth-child(n+6), .PortfolioContent video:nth-child(n+6) {
+  animation-delay: 0.6s;
+}
+
+.gallery img:hover, .PortfolioContent img:hover,
+.gallery video:hover, .PortfolioContent video:hover,
+iframe:hover {
+  transform: scale(1.05);
+}
+
+/* ===== iFrame Styling ===== */
+iframe {
+  border-radius: 8px;
+  transition: transform 0.3s;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+  flex: 1 1 250px;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* ===== Video Section ===== */
+.VideoSection {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.VideoSection h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* ===== Contact Section ===== */
+.contact-section {
+  max-width: 600px;
+  margin: 8rem auto 4rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0; /* start hidden */
+  animation: fadeSlideUp 1s ease-out forwards;
+}
+
+.contact-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+/* ===== Social Icons ===== */
+.social-icons, .Socials {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.social-icons img, .Socials img {
+  width: 80px;
+  max-width: 150px;
+  transition: transform 0.3s ease;
+  opacity: 0; /* start hidden */
+  animation: fadeSlideUp 0.8s ease-out forwards;
+}
+
+.social-icons img:nth-child(1) { animation-delay: 0.5s; }
+.social-icons img:nth-child(2) { animation-delay: 0.7s; }
+
+.social-icons img:hover,
+.Socials img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px var(--accent-color);
+  border-radius: 50%;
+}
+
+/* ===== Buttons ===== */
+.ContactBtn {
+  display: inline-block;
+  color: var(--text-color);
+  padding: 0.8rem 1.5rem;
+  border: 2px solid var(--text-color);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.ContactBtn:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: var(--text-color);
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* ===== Animation Keyframes ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+   gap: 0.5rem;
+   padding: 0.5rem 1rem;   /* reduce padding */
+   background-color: rgba(0, 0, 0, 0.9); /* darker, slimmer look */
+   position: static;       /* remove fixed positioning */
+
+  }
+
+  nav img {
+    max-width: 120px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .Headline h1, .ContactHeadline h1 {
+    font-size: 1.8rem;
+  }
+
+  .gallery img, .PortfolioContent img,
+  .gallery video, .PortfolioContent video {
+    max-width: 90%;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .social-icons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-section {
+    margin-top: 10rem;
+    padding: 1.5rem;
+  }
+}
+
+/* ===== Toggle Button ===== */
+.nav-toggle {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1100;
+}
+
+.nav-toggle span {
+  width: 100%;
+  height: 3px;
+  background: var(--text-color);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animated toggle (bars → X) */
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== Responsive Nav ===== */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex; /* show hamburger on mobile */
+  }
+
+  .nav-links {
+    display: none; /* hide links by default */
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex; /* show links when toggled */
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  
+
+  nav ul {
+    flex-direction: column; /* stack links vertically */
+    gap: 0.5rem;
+  }
+}

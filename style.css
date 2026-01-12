@@ -2,7 +2,7 @@
 :root {
   --bg-color: #1a1a1a;        /* unified dark background */
   --text-color: #ffffff;
-  --accent-color: #f59116;
+  --accent-color: #ffffff;
   --font-family: 'Segoe UI', sans-serif;
 }
 
@@ -378,3 +378,4 @@ footer {
     gap: 0.5rem;
   }
 }
+

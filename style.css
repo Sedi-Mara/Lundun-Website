@@ -2,8 +2,8 @@
 :root {
   --bg-color: #1a1a1a;        /* unified dark background */
   --text-color: #ffffff;
-  --accent-color: #ffffff;
-  --font-family: 'Segoe UI', sans-serif;
+  --accent-color: #f59116;
+  --font-family: 'DM Sans', 'Montserrat', sans-serif;
 }
 
 * {
@@ -76,7 +76,6 @@ nav a:hover {
 
 /* ===== Headline Sections ===== */
 .Headline, .ContactHeadline {
-  text-align: center;
   padding-top: 10rem;
   opacity: 0;
   animation: fadeIn 1s ease-out forwards;
@@ -89,6 +88,44 @@ nav a:hover {
   opacity: 0;
   animation: fadeSlideUp 0.8s ease-out forwards;
   animation-delay: 0.2s;
+  text-align: center;
+}
+
+/* ===== TitleDes Section ===== */
+#TitleDes {
+  border-left: 1px solid #ffffff;
+  padding-left: 2rem;
+  margin-left: 8rem;
+  margin-bottom: 4rem;
+  text-align: left !important;
+}
+
+#TitleDes h1 {
+  text-align: left !important;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+#TitleDes p {
+  text-align: left !important;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ffffff;
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+  max-width: 800px;
+}
+
+/* ===== Section Headings ===== */
+.Headline section h2 {
+  text-align: center;
 }
 
 /* ===== Gallery / Portfolio ===== */
@@ -98,6 +135,14 @@ nav a:hover {
   justify-content: center;
   gap: 2rem;
   margin: 2rem 0;
+}
+
+/* Center content inside each gallery item (captions under videos/images) */
+.gallery > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .gallery img, .PortfolioContent img,
@@ -142,6 +187,23 @@ iframe:hover {
   transform: scale(1.05);
 }
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery > div {
+    width: 20%; /* Each item takes up 1/4 of the total width */
+    box-sizing: border-box;
+    padding: 0.5rem; /* Gives some space around each iframe */
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Maintains the aspect ratio */
+}
+
 /* ===== iFrame Styling ===== */
 iframe {
   border-radius: 8px;
@@ -149,8 +211,8 @@ iframe {
   opacity: 0;
   animation: fadeIn 0.8s ease-out forwards;
   animation-delay: 0.4s;
-  flex: 1 1 250px;
-  max-width: 300px;
+  flex: 0 1 calc(25% - 1.5rem);
+  max-width: 100%;
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
@@ -221,25 +283,98 @@ iframe {
 .social-icons img:hover,
 .Socials img:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 12px var(--accent-color);
+  box-shadow: 0 0 12px #ffffff;
   border-radius: 50%;
 }
 
 /* ===== Buttons ===== */
 .ContactBtn {
-  display: inline-block;
+  display: block;
   color: var(--text-color);
   padding: 0.8rem 1.5rem;
   border: 2px solid var(--text-color);
   border-radius: 5px;
   font-size: 1.2rem;
   margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  text-align: center;
   transition: background-color 0.3s, transform 0.2s;
 }
 
 .ContactBtn:hover {
   background-color: var(--accent-color);
   transform: scale(1.05);
+}
+
+
+/* ===== Hero Section ===== */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: auto;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.hero {
+  width: 100%;
+  height: 400px; /* Fixed height for hero blocks */
+  color: white; /* Text color is white by default */
+  text-align: center;
+  line-height: initial; /* This will vertically align the heading in the middle of each hero block */
+  position: relative;
+  top: 50%;
+  
+}
+
+.hero > h2 {
+      /* Remove default margins for cleaner look */
+    height: 50%;
+    top: 50%;   /* Sets the height of heading equal to its parent (hero) and allows it to adjust based on content inside it */
+    margin-top: 5%; /* Negative margin equal to half the height to perfectly center it vertically */;
+    margin-bottom: 0%;
+}
+
+.hero1 {
+  background: url('https://res.cloudinary.com/dtl8l1au7/image/upload/v1768407328/coppa-cover-vJPZ4Gy6RZM-unsplash_r0527x.jpg') no-repeat center center; 
+  -webkit-background-size: stretch;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 60%;
+  margin-top: 30px;;
+}
+
+.hero2 {
+  background: url('https://res.cloudinary.com/dtl8l1au7/image/upload/v1768408627/headphones_black_dark_193710_3840x2160_t3u0ir.jpg') no-repeat center center; 
+  -webkit-background-size: stretch;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 60%;
+}
+
+.hero3 {
+  background: url('https://res.cloudinary.com/dtl8l1au7/image/upload/v1768409553/1000_F_440094252_yrKGVKVLOGrWhO4LIaoGl2GyRf6tbAVP_fe2aq5.jpg') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 60%;
+}
+
+.hero4 {
+  background: url('https://res.cloudinary.com/dtl8l1au7/image/upload/v1768409778/mix-5592020_1280-1-1280x660_ypsq8p.webp') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 60%;
 }
 
 /* ===== Footer ===== */
@@ -274,14 +409,44 @@ footer {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 768px) {
+
+ @media (max-width: 768px) {
+  /* Move #TitleDes to the left */
+  #TitleDes {
+    border-left: 1px solid #ffffff;
+    padding-left: 1rem;  /* Reduced padding for mobile */
+    margin-left: 1rem;   /* Reduced margin for mobile */
+    margin-bottom: 2rem; /* Reduced bottom margin */
+    text-align: left;
+    width: 90%;          /* Take up most of the width but leave some space */
+    max-width: none;     /* Remove any max-width restrictions */
+  }
+
+  /* Adjust heading and paragraph alignment */
+  #TitleDes h1 {
+    text-align: left !important;
+    font-size: 1.8rem;   /* Slightly smaller font for mobile */
+    line-height: 1.3;
+  }
+
+  #TitleDes p {
+    text-align: left !important;
+    font-size: 1rem;     /* Slightly smaller font for mobile */
+    max-width: 100%;     /* Use full available width */
+  }
+
+  /* Gallery adjustments */
+  .gallery > div {
+    width: 45%; /* Two items per row on mobile */
+  }
+  
+  /* Navigation adjustments */
   nav {
     flex-direction: column;
-   gap: 0.5rem;
-   padding: 0.5rem 1rem;   /* reduce padding */
-   background-color: rgba(0, 0, 0, 0.9); /* darker, slimmer look */
-   position: static;       /* remove fixed positioning */
-
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: static;
   }
 
   nav img {
@@ -299,7 +464,7 @@ footer {
 
   .gallery img, .PortfolioContent img,
   .gallery video, .PortfolioContent video {
-    max-width: 90%;
+    max-width: 25%;
   }
 
   .contact-info {
@@ -315,6 +480,10 @@ footer {
     margin-top: 10rem;
     padding: 1.5rem;
   }
+
+  .hero {
+        width: 100%;     /* Each hero takes full width of the parent container on mobile phones */
+    }
 }
 
 /* ===== Toggle Button ===== */
@@ -377,5 +546,10 @@ footer {
     flex-direction: column; /* stack links vertically */
     gap: 0.5rem;
   }
+
+  
+
+
 }
+
 

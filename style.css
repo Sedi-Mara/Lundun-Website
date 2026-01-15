@@ -149,7 +149,8 @@ nav a:hover {
 .gallery video, .PortfolioContent video,
 .Row1 img, .Row3 img, .Row2 video {
   flex: 1 1 250px;
-  max-width: 300px;
+  max-width: 180px;
+  height: 200px;
   border-radius: 8px;
   transition: transform 0.3s;
   opacity: 0;
@@ -196,6 +197,7 @@ iframe:hover {
     width: 20%; /* Each item takes up 1/4 of the total width */
     box-sizing: border-box;
     padding: 0.5rem; /* Gives some space around each iframe */
+    
 }
 
 iframe {
@@ -216,6 +218,56 @@ iframe {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
+}
+
+/* Central play button */
+.plyr__control--overlaid {
+  background: rgba(5, 5, 5, 0.9); /* gold background */
+  color: black;                       /* play icon color */
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+/* Control bar */
+.plyr__controls {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 8px;
+}
+
+.plyr__controls button {
+  color: #fffefe;
+}
+
+.plyr__controls button:hover {
+  color: #161611; /* gold hover */
+}
+
+/* Progress bar accent */
+:root {
+  --plyr-color-main: #302f2f; /* global accent color */
+}
+
+/* Hide controls by default */
+.plyr__controls {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show controls when hovering over the player */
+.plyr:hover .plyr__controls {
+  opacity: 1;
+}
+
+/* Apply rounded corners to Plyr videos */
+.plyr__video-embed iframe {
+  border-radius: 12px;   /* adjust radius to taste */
+  overflow: hidden;      /* ensures corners clip properly */
+}
+
+/* Optional: also round the outer Plyr container */
+.plyr {
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 /* ===== Video Section ===== */
@@ -318,7 +370,7 @@ iframe {
   align-items: center;
   height: auto;
   margin-top: 150px;
-  margin-bottom: 150px;
+  margin-bottom: 10px;
 }
 
 .hero {
@@ -330,15 +382,26 @@ iframe {
   position: relative;
   top: 50%;
   
+  
 }
 
 .hero > h2 {
       /* Remove default margins for cleaner look */
-    height: 50%;
+    height: 20%;
     top: 50%;   /* Sets the height of heading equal to its parent (hero) and allows it to adjust based on content inside it */
-    margin-top: 5%; /* Negative margin equal to half the height to perfectly center it vertically */;
-    margin-bottom: 0%;
+    margin-top: 10%; /* Negative margin equal to half the height to perfectly center it vertically */;
+    margin-bottom: 2px;
 }
+
+.hero h2 {
+  
+  margin-bottom: 5px;
+}
+
+.hero p {
+  margin-top: 5px;
+}
+
 
 .hero1 {
   background: url('https://res.cloudinary.com/dtl8l1au7/image/upload/v1768407328/coppa-cover-vJPZ4Gy6RZM-unsplash_r0527x.jpg') no-repeat center center; 
@@ -376,6 +439,14 @@ iframe {
   background-size: cover;
   width: 60%;
 }
+
+.hero {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlideUp 1s ease-out forwards;
+  animation-delay: var(--delay, 0s);
+}
+
 
 /* ===== Footer ===== */
 footer {
@@ -464,7 +535,9 @@ footer {
 
   .gallery img, .PortfolioContent img,
   .gallery video, .PortfolioContent video {
-    max-width: 25%;
+    min-width: 20%;
+    max-width: 30%;
+    height: 160px;
   }
 
   .contact-info {

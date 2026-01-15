@@ -188,12 +188,12 @@ iframe:hover {
   transform: scale(1.05);
 }
 
-.gallery {
+.gallery, .VideoSection {
     display: flex;
     flex-wrap: wrap;
 }
 
-.gallery > div {
+.gallery > div  {
     width: 20%; /* Each item takes up 1/4 of the total width */
     box-sizing: border-box;
     padding: 0.5rem; /* Gives some space around each iframe */
@@ -284,10 +284,14 @@ iframe {
 
 /* ===== Video Section ===== */
 .VideoSection {
-  text-align: center;
+  text-align: center;       /* centers the heading text */
   margin: 4rem 0;
+  display: flex;
+  flex-direction: column;   /* stack title above videos */
+  align-items: center;      /* center everything horizontally */
 }
 
+/* Center the h2 title */
 .VideoSection h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -295,7 +299,30 @@ iframe {
   opacity: 0;
   animation: fadeSlideUp 0.8s ease-out forwards;
   animation-delay: 0.2s;
+  text-align: center;       /* ensures the title is centered */
 }
+
+/* Center the video content */
+.VideoContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* centers the videos horizontally */
+  gap: 2rem;                /* spacing between videos */
+  width: 100%;
+  max-width: 900px;         /* keeps them grouped in the middle */
+}
+
+/* Override gallery iframe sizing for advertisement videos */
+.VideoContent iframe, .VideoContent, 
+.VideoContent .plyr__video-embed iframe {
+  flex: none;          /* cancel the 25% flex rule */
+  width: 80%;          /* make them wider */
+  max-width: 800px;    /* cap width */
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  display: block;
+}
+
 
 /* ===== Contact Section ===== */
 .contact-section {
@@ -534,7 +561,7 @@ footer {
   }
 
   nav img {
-    max-width: 120px;
+    max-width: 100%;
   }
 
   nav ul {
@@ -548,9 +575,10 @@ footer {
 
   .gallery img, .PortfolioContent img,
   .gallery video, .PortfolioContent video {
-    min-width: 20%;
-    max-width: 30%;
-    height: 140px;
+    /*min-width: 200px;
+    max-width: 150px;
+    height: 200px;*/
+    min-width: 45%;
   }
 
   .contact-info {
@@ -633,9 +661,17 @@ footer {
     gap: 0.5rem;
   }
 
+
+
+
   
 
 
 }
+
+
+
+
+
 
 

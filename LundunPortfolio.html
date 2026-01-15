@@ -2,7 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <title>Works | John Lundun</title>
   </head>
   <body>
@@ -55,6 +57,8 @@
       <section class="VideoSection">
         <h2>Advertisements</h2>
         <div class="VideoContent">
+
+          <div class="plyr__video-embed">
           <iframe width="350" height="200"
               src="https://www.youtube.com/embed/xWyXW8s_Rp8"
               title="YouTube video player"
@@ -62,7 +66,10 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
           </iframe>
+          </div>
+          <br>
 
+          <div class="plyr__video-embed">
           <iframe width="350" height="200" 
           src="https://www.youtube.com/embed/85_I3SGIY1o?si=08iMLSKXrKpJG92l" 
           title="YouTube video player" 
@@ -71,6 +78,8 @@
           referrerpolicy="strict-origin-when-cross-origin" 
           allowfullscreen>
           </iframe>
+          </div>
+
         </div>
       </section>
 
@@ -78,31 +87,36 @@
 
     <!-- ===== Scroll-Hide Nav Script ===== -->
     <script>
-      // Scroll-hide nav
-      const nav = document.querySelector("nav");
-      let prevScrollPos = window.pageYOffset;
+    // Scroll-hide nav
+    const nav = document.querySelector("nav");
+    let prevScrollPos = window.pageYOffset;
 
-      window.addEventListener("scroll", () => {
-        let currentScrollPos = window.pageYOffset;
-        if (prevScrollPos < currentScrollPos && currentScrollPos > 50) {
-          // Scrolling down - hide nav
-          nav.style.top = "-200px";
-        } else {
-          // Scrolling up - show nav
-          nav.style.top = "0";
-        }
-        prevScrollPos = currentScrollPos;
-      });
+    window.addEventListener("scroll", () => {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollPos < currentScrollPos && currentScrollPos > 50) {
+        // Scrolling down - hide nav
+        nav.style.top = "-200px";
+      } else {
+        // Scrolling up - show nav
+        nav.style.top = "0";
+      }
+      prevScrollPos = currentScrollPos;
+    });
 
-      // Toggle nav links on mobile
-      const toggleBtn = document.querySelector(".nav-toggle");
-      const navLinks = document.querySelector(".nav-links");
+    // Toggle nav links on mobile
+    const toggleBtn = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
 
-      toggleBtn.addEventListener("click", () => {
-        toggleBtn.classList.toggle("active");
-        navLinks.classList.toggle("active");
-      });
-    </script>
+    toggleBtn.addEventListener("click", () => {
+      toggleBtn.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+  </script>
 
+  <script>
+  const players = Array.from(document.querySelectorAll('.plyr__video-embed')).map(p => new Plyr(p, {
+    controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen']
+  }));
+</script>
   </body>
 </html>

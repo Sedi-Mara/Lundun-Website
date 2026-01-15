@@ -150,8 +150,9 @@ nav a:hover {
 .Row1 img, .Row3 img, .Row2 video {
   flex: 1 1 250px;
   max-width: 180px;
-  height: 200px;
+  height: auto;
   border-radius: 8px;
+  object-fit: cover;
   transition: transform 0.3s;
   opacity: 0;
   animation: fadeIn 0.8s ease-out forwards;
@@ -578,8 +579,10 @@ footer {
     /*min-width: 200px;
     max-width: 150px;
     height: 200px;*/
-    min-width: 45%;
-    height: 100px;
+    max-width: 30%;
+    max-height: 300px;
+    height: auto;
+    object-fit: cover;
   }
 
   .contact-info {

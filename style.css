@@ -194,9 +194,8 @@ iframe:hover {
 }
 
 .gallery > div {
-    flex: 1 1 300px;   /* flexible width, minimum 300px */
-    max-width: 100%;   /* don’t overflow */
-
+    width: 20%; /* Each item takes up 1/4 of the total width */
+    box-sizing: border-box;
     padding: 0.5rem; /* Gives some space around each iframe */
     
 }
@@ -520,12 +519,9 @@ footer {
   }
 
   /* Gallery adjustments */
- .gallery > div {
+  .gallery > div {
     flex: 1 1 100%;   /* one video per row on tablets */
   }
-
-}
-
 
   
   /* Navigation adjustments */
@@ -637,14 +633,7 @@ footer {
     gap: 0.5rem;
   }
 
-  @media (max-width: 480px) {
-  .gallery > div {
-    flex: 1 1 100%;   /* one video per row on tablets */
-  }
-
-}
-
-
+  
 
 
 }

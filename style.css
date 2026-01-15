@@ -550,7 +550,7 @@ footer {
   .gallery video, .PortfolioContent video {
     min-width: 20%;
     max-width: 30%;
-    height: 160px;
+    height: 140px;
   }
 
   .contact-info {

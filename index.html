@@ -7,7 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 </head>
 <body>
 
@@ -53,38 +55,48 @@
         <section>
           <!--h2>Adverts</h2-->
           <div class="gallery">
-            <div>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/lV5yMuKeTlE?si=Mqcqo1U6GoXt-ptY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              </iframe>
+            <div class="plyr__video-embed" id="player1">
+              <iframe
+                src="https://www.youtube.com/embed/lV5yMuKeTlE?si=Mqcqo1U6GoXt-ptY"
+                allowfullscreen
+                allow="autoplay"
+              ></iframe>
 
               <p>Nandos Open Letter</p>
             </div>
-            <div>
-              <iframe width="350" height="200" src="https://www.youtube.com/embed/85_I3SGIY1o?si=08iMLSKXrKpJG92l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <div class="plyr__video-embed">
+              <iframe width="350" height="200" 
+              src="https://www.youtube.com/embed/85_I3SGIY1o?si=08iMLSKXrKpJG92l" 
+              title="YouTube video player" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen
+              allow="autoplay"></iframe>
               <p>Game back to school</p>
             </div>
 
-            <div>
+            <div class="plyr__video-embed">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/di10pOkQxrk?si=ZqHYJbVLFoa1uSd5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               <p>Nandos x Kwesta - Oh what a place</p>
             </div>
 
-            <div>
+            <div class="plyr__video-embed">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/xWyXW8s_Rp8?si=rrOCwAYRi2jSJkbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               <p>Game heritage day</p>
             </div>
 
-            <div>
+            <div class="plyr__video-embed">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/RLaC7aGCtNE?si=1wX8qnFxHZIM78E6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               <p>JSE claim it</p>
             </div>
 
-             <div>
+             <div class="plyr__video-embed">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/DtucbqCEB4M?si=D2SoO9_uKhIjL6hs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               <p>Tropika Nothing Smoother</p>
             </div>
 
-            <div>
+            <div class="plyr__video-embed">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/4V3wM-29cho?si=N7QRZWTwpFcNL2F7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               <p>Game Black Friday Appliances</p>
             </div>
@@ -183,6 +195,12 @@
       navLinks.classList.toggle("active");
     });
   </script>
+
+  <script>
+  const players = Array.from(document.querySelectorAll('.plyr__video-embed')).map(p => new Plyr(p, {
+    controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen']
+  }));
+</script>
 
 </body>
 </html>

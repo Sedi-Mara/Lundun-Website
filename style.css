@@ -103,13 +103,18 @@ nav a:hover {
 #TitleDes h1 {
   text-align: left !important;
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   color: #ffffff;
   opacity: 0;
   animation: fadeSlideUp 0.8s ease-out forwards;
   animation-delay: 0.2s;
   font-weight: 700;
   line-height: 1.2;
+}
+
+#TitleDes h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 #TitleDes p {
@@ -307,8 +312,8 @@ iframe {
 .VideoContent {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;  /* centers the videos horizontally */
-  gap: 2rem;                /* spacing between videos */
+  /*justify-content: center;  /* centers the videos horizontally */
+  /*gap: 2rem;                /* spacing between videos */
   width: 100%;
   max-width: 900px;         /* keeps them grouped in the middle */
 }
@@ -421,6 +426,8 @@ iframe {
   line-height: initial; /* This will vertically align the heading in the middle of each hero block */
   position: relative;
   top: 50%;
+ 
+
   
   
 }
@@ -443,6 +450,9 @@ iframe {
 }
 
 
+
+
+
 .hero1 {
   background: url('https://res.cloudinary.com/dtl8l1au7/image/upload/v1768407328/coppa-cover-vJPZ4Gy6RZM-unsplash_r0527x.jpg') no-repeat center center; 
   -webkit-background-size: stretch;
@@ -450,20 +460,24 @@ iframe {
   -o-background-size: cover;
   background-size: cover;
   width: 60%;
-  margin-top: 30px;;
+  margin-top: 30px;
+  background-color: rgba(0,0,0,0.4); /* dark layer */
+  background-blend-mode: multiply;   /* blends color with image */
 }
 
 .hero2 {
-  background: url('https://res.cloudinary.com/dtl8l1au7/image/upload/v1768408627/headphones_black_dark_193710_3840x2160_t3u0ir.jpg') no-repeat center center; 
+  background: url('https://res.cloudinary.com/dtl8l1au7/image/upload/v1768838621/AdobeStock_1745006726_q1zntf.jpg') no-repeat right center; 
   -webkit-background-size: stretch;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   width: 60%;
+  background-color: rgba(0,0,0,0.4); /* dark layer */
+  background-blend-mode: multiply;   /* blends color with image */
 }
 
 .hero3 {
-  background: url('https://res.cloudinary.com/dtl8l1au7/image/upload/v1768409553/1000_F_440094252_yrKGVKVLOGrWhO4LIaoGl2GyRf6tbAVP_fe2aq5.jpg') no-repeat center center; 
+  background: url('https://res.cloudinary.com/dtl8l1au7/image/upload/v1768820972/AdobeStock_420496622_oimzyp.jpg') no-repeat right center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -478,6 +492,8 @@ iframe {
   -o-background-size: cover;
   background-size: cover;
   width: 60%;
+   background-color: rgba(0,0,0,0.4); /* dark layer */
+  background-blend-mode: multiply;   /* blends color with image */
 }
 
 .hero {
@@ -602,6 +618,10 @@ footer {
   .hero {
         width: 100%;     /* Each hero takes full width of the parent container on mobile phones */
     }
+
+
+    
+    
 }
 
 /* ===== Toggle Button ===== */
@@ -666,12 +686,156 @@ footer {
   }
 
 
-
-
-  
-
-
 }
+
+/* =========================================================
+   Portfolio mobile slider (scoped, won't affect index)
+   ========================================================= */
+
+/* Prevent your global iframe fade-in (opacity:0) from making slider slides look blank */
+.video-scroll iframe,
+.video-scroll .plyr__video-embed,
+.video-scroll .plyr__video-embed iframe {
+  opacity: 1 !important;
+  animation: none !important;
+}
+
+/* Stop global ".gallery > div { width:20% }" from shrinking our slider wrappers */
+.video-scroll .video-gallery > .video-slider,
+.video-scroll .video-gallery > .vs-dots {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+/* Slider structure */
+.video-scroll .video-slider {
+  position: relative;
+  width: 100%;
+}
+
+.video-scroll .vs-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.video-scroll .vs-track {
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform;
+  transition: transform 0.5s ease;
+}
+
+/* Force slider dots to lay out horizontally (override global .gallery > div flex-direction: column) */
+.video-scroll .video-gallery > .vs-dots{
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+/* Bring slider dots closer to the video */
+.video-scroll .vs-dots {
+  margin-top: 0. !important;  /* was ~1rem */
+}
+
+@media (max-width: 768px) {
+  /* The big space is the gallery gap between the slider and dots */
+  .video-scroll .video-gallery {
+    gap: 0.25rem !important; /* adjust: 0, 0.25rem, 0.5rem */
+  }
+
+  /* Remove the padding inherited from .gallery > div */
+  .video-scroll .video-gallery > .vs-dots {
+    padding: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
+
+
+
+
+/* Each slide is full width on mobile */
+@media (max-width: 768px) {
+  .video-scroll .vs-slide {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    padding: 0.5rem;
+  }
+
+  /* Buttons */
+  .video-scroll .vs-btn {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .video-scroll .vs-prev { left: 10px; }
+  .video-scroll .vs-next { right: 10px; }
+
+  /* Dots */
+  .video-scroll .vs-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .video-scroll .vs-dots button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+  }
+
+  .video-scroll .vs-dots button.active {
+    background: #333;
+  }
+}
+
+/* Desktop: keep it behaving like a normal gallery grid */
+@media (min-width: 769px) {
+  .video-scroll .vs-viewport {
+    overflow: visible;
+  }
+
+  .video-scroll .vs-track {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    transform: none !important;
+  }
+
+  .video-scroll .vs-slide {
+    flex: 1 1 250px;
+    max-width: 320px;
+  }
+
+  .video-scroll .vs-btn,
+  .video-scroll .vs-dots {
+    display: none;
+  }
+}
+
+/* Center captions under videos in the portfolio slider */
+.video-scroll .vs-slide p {
+  text-align: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+
+
 
 
 

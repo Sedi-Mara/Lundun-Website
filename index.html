@@ -3,172 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recording studio | John Lundun  </title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-  <link rel="stylesheet" href="style.css?v=2" />
-  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+  <title>Contact | John Lundun</title>
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
 
-  <div class="container">
+  <header>
+    <nav>
+      <a href="index.html" id="Logo">
+        <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217916/Logo-removebg_yygqpd.png" alt="John Lundun Logo" />
+      </a>
 
-    <!-- ===== Navigation ===== -->
-    <header>
-      <nav>
-        <a href="index.html" id="Logo">
-          <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217916/Logo-removebg_yygqpd.png" alt="John Lundun Logo" />
-        </a>
+      <!-- Toggle button with spans for animation -->
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-        <!-- Toggle button with spans for animation -->
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="LundunPortfolio.html">Works</a></li>
+        <li><a href="LundunContact.html" id="Selected">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <!-- Nav links must have .nav-links class -->
-        <ul class="nav-links">
-          <li><a href="index.html" id="Selected">Home</a></li>
-          <li><a href="LundunPortfolio.html">Works</a></li>
-          <li><a href="LundunContact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- ===== Headline ===== -->
-    <main>
-      <article class="Headline">
-        <div id="TitleDes">
-        <h1>
-          Lundun Audio <br>
-          Your Composer for Film, TV & Media
-        </h1>
-        <br>
-        <p>I craft original music and audio solutions that elevate stories. From compelling film scores and immersive TV themes to dynamic commercial soundtracks and brand sonic identities, I deliver professional composition, sound design, and full audio post-production.
-</p>
+  <main>
+    <section class="contact-section">
+      <h1>Contact Me</h1>
+      <div class="contact-info">
+        <p><strong>Email:</strong> LundunJohn@gmail.com</p>
+        <p><strong>Phone:</strong> +27 76 086 6806</p>
       </div>
 
-      <!-- ===== Advertising Section ===== -->
-        <section>
-          <!--h2>Adverts</h2-->
-          <div class="gallery">
-            <div class="plyr__video-embed" id="player1">
-              <iframe
-                src="https://www.youtube.com/embed/lV5yMuKeTlE?si=Mqcqo1U6GoXt-ptY"
-                allowfullscreen
-                allow="autoplay"
-              ></iframe>
+      <div class="social-icons">
+        <a href="https://za.linkedin.com/in/john-lundun-9b357162" target="_blank">
+          <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217577/10464412_epaebr.png" alt="LinkedIn" />
+        </a>
+        <a href="https://www.instagram.com/johnlundun/" target="_blank">
+          <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217577/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand-b_rmltmy.png" alt="Instagram" />
+        </a>
+      </div>
+    </section>
+  </main>
 
-              <p>Nandos Open Letter</p>
-            </div>
+  <footer>
+    <p>&copy; 2026 Lundun Inc.</p>
+  </footer>
 
-            <div class="plyr__video-embed">
-              <iframe width="350" height="200" 
-              src="https://www.youtube.com/embed/85_I3SGIY1o?si=08iMLSKXrKpJG92l" 
-              title="YouTube video player" frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin" 
-              allowfullscreen
-              allow="autoplay"></iframe>
-              <p>Game back to school</p>
-            </div>
-
-            <div class="plyr__video-embed">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/di10pOkQxrk?si=ZqHYJbVLFoa1uSd5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <p>Nandos x Kwesta - Oh what a place</p>
-            </div>
-
-            <div class="plyr__video-embed">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/xWyXW8s_Rp8?si=rrOCwAYRi2jSJkbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <p>Game heritage day</p>
-            </div>
-
-            <div class="plyr__video-embed">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/RLaC7aGCtNE?si=1wX8qnFxHZIM78E6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <p>JSE claim it</p>
-            </div>
-
-             <div class="plyr__video-embed">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/DtucbqCEB4M?si=D2SoO9_uKhIjL6hs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <p>Tropika Nothing Smoother</p>
-            </div>
-
-            <div class="plyr__video-embed">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/4V3wM-29cho?si=N7QRZWTwpFcNL2F7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <p>Game Black Friday Appliances</p>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- ===== What we do Section ===== -->
-
-          <section>
-            
-
-            <div class="hero-container">
-              <h1>What we do</h1>
-              <div class="hero hero1">
-                  <h2>Original Composition</h2>
-                  <p>Bespoke scores for film, television, advertising, and documentaries.</p>
-              </div>
-  
-              <div class="hero hero2">
-                <h2>Sync Licensing</h2>
-                <p>High-quality, licensable tracks ready for media placement</p>
-              </div>
-    
-              <div class="hero hero3">
-                <h2>Voice Over Recording</h2>
-                <p>Professional voice over services for commercials, narrations, and more.</p>
-              </div>
-
-              <div class="hero hero4">
-                <h2>Mixing & Mastering</h2>
-                <p>Professional mixing and mastering services to enhance your audio quality.</p>
-              </div>
-            </div>
-
-          </section>
-        <!-- ===== Film Section ===== -->
-        <section>
-          <h2>Film</h2>
-          <div class="gallery">
-            <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217847/Piano_Love_Piano_Love_Netflix_Movie_mjrfx1.png" alt="Poster for Piano Love Netflix Movie" />
-            <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217890/outlaws_S2_Showmax_Series_jytdw7.png" alt="Poster for Outlaws Season 2 Showmax Series" />
-            <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217906/Mkhize_to_Masemola_Showmax_Movie_ux08cr.png" alt="Poster for Mkhize to Masemola Showmax Movie" />
-          </div>
-        </section>
-
-
-        <!-- ===== Music Section ===== -->
-        <section>
-          <h2>Music</h2>
-          <div class="gallery">
-            <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768395913/Deda_vczya8.png" alt="Samthing Soweto - Deda" />
-            <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217519/Kwesta_ft_Wale_-_Spirit_pdvcrz.jpg" alt="Cover art for Kwesta ft Wale - Spirit" />
-            <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768395876/Bab_Motha_n16bfa.jpg" alt="BabMotha" />
-            <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768395890/BBT_w4klr3.jpg" alt="Cover art for NaakMusiq ft Bucie - Ntombi" />
-          </div>
-        </section>
-
-        <!-- ===== Contact Button ===== -->
-        <a href="LundunContact.html" class="ContactBtn">Contact Me</a>
-      </article>
-    </main>
-
-    <!-- ===== Footer ===== -->
-    <footer>
-      <p>&copy; 2026 Lundun Inc.</p>
-    </footer>
-    
-
-  </div>
-
-  <!-- ===== Scroll-Hide Nav Script ===== -->
   <script>
     // Scroll-hide nav
     const nav = document.querySelector("nav");
@@ -196,12 +79,5 @@
     });
   </script>
 
-  <script>
-  const players = Array.from(document.querySelectorAll('.plyr__video-embed')).map(p => new Plyr(p, {
-    controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen']
-  }));
-</script>
-
 </body>
 </html>
-

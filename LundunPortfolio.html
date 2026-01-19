@@ -2,8 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <title>Works | John Lundun</title>
   </head>
@@ -17,14 +18,10 @@
           <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217916/Logo-removebg_yygqpd.png" alt="John Lundun Logo">
         </a>
 
-        <!-- Toggle button with spans for animation -->
         <button class="nav-toggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
 
-        <!-- Nav links must have .nav-links class -->
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="LundunPortfolio.html" id="Selected">Works</a></li>
@@ -37,8 +34,133 @@
         <h1>Our Work</h1>
       </article>
 
+      <!-- ===== Advertising Section (desktop grid / mobile slider) ===== -->
+      <section class="video-scroll">
+        <!-- Keep .gallery so your existing styling stays consistent -->
+        <div class="gallery video-gallery">
+
+          <!-- Slider wrapper (scoped so it won't clash with other .gallery usage) -->
+          <div class="video-slider" aria-label="Adverts slider">
+            <button class="vs-btn vs-prev" type="button" aria-label="Previous video">‹</button>
+
+            <div class="vs-viewport">
+              <div class="vs-track">
+
+                <div class="vs-slide">
+                  <div class="plyr__video-embed">
+                    <iframe
+                      src="https://www.youtube.com/embed/lV5yMuKeTlE?enablejsapi=1&playsinline=1"
+                      allowfullscreen
+                      allow="autoplay; encrypted-media; picture-in-picture"
+                    ></iframe>
+                  </div>
+                  <p>Nandos Open Letter</p>
+                </div>
+
+                <div class="vs-slide">
+                  <div class="plyr__video-embed">
+                    <iframe
+                      src="https://www.youtube.com/embed/85_I3SGIY1o?enablejsapi=1&playsinline=1"
+                      allowfullscreen
+                      allow="autoplay; encrypted-media; picture-in-picture"
+                    ></iframe>
+                  </div>
+                  <p>Game back to school</p>
+                </div>
+
+                <div class="vs-slide">
+                  <div class="plyr__video-embed">
+                    <iframe
+                      src="https://www.youtube.com/embed/di10pOkQxrk?enablejsapi=1&playsinline=1"
+                      allowfullscreen
+                      allow="autoplay; encrypted-media; picture-in-picture"
+                    ></iframe>
+                  </div>
+                  <p>Nandos x Kwesta - Oh what a place</p>
+                </div>
+
+                <div class="vs-slide">
+                  <div class="plyr__video-embed">
+                    <iframe
+                      src="https://www.youtube.com/embed/xWyXW8s_Rp8?enablejsapi=1&playsinline=1"
+                      allowfullscreen
+                      allow="autoplay; encrypted-media; picture-in-picture"
+                    ></iframe>
+                  </div>
+                  <p>Game heritage day</p>
+                </div>
+
+                <div class="vs-slide">
+                  <div class="plyr__video-embed">
+                    <iframe
+                      src="https://www.youtube.com/embed/RLaC7aGCtNE?enablejsapi=1&playsinline=1"
+                      allowfullscreen
+                      allow="autoplay; encrypted-media; picture-in-picture"
+                    ></iframe>
+                  </div>
+                  <p>JSE claim it</p>
+                </div>
+
+                <div class="vs-slide">
+                  <div class="plyr__video-embed">
+                    <iframe
+                      src="https://www.youtube.com/embed/DtucbqCEB4M?enablejsapi=1&playsinline=1"
+                      allowfullscreen
+                      allow="autoplay; encrypted-media; picture-in-picture"
+                    ></iframe>
+                  </div>
+                  <p>Tropika Nothing Smoother</p>
+                </div>
+
+                <div class="vs-slide">
+                  <div class="plyr__video-embed">
+                    <iframe
+                      src="https://www.youtube.com/embed/4V3wM-29cho?enablejsapi=1&playsinline=1"
+                      allowfullscreen
+                      allow="autoplay; encrypted-media; picture-in-picture"
+                    ></iframe>
+                  </div>
+                  <p>Game Black Friday Appliances</p>
+                </div>
+
+                <div class="vs-slide">
+                  <div class="plyr__video-embed">
+                    <iframe
+                      src="https://www.youtube.com/embed/xoynBmtIXMc?enablejsapi=1&playsinline=1"
+                      allowfullscreen
+                      allow="autoplay; encrypted-media; picture-in-picture"
+                    ></iframe>
+                  </div>
+                  <p>Tropika drinking yoghurt</p>
+                </div>
+
+                <div class="vs-slide">
+                  <div class="plyr__video-embed">
+                    <iframe
+                      src="https://www.youtube.com/embed/T9V0oLjhqCA?enablejsapi=1&playsinline=1&start=12"
+                      allowfullscreen
+                      allow="autoplay; encrypted-media; picture-in-picture"
+                    ></iframe>
+                  </div>
+                  <p>Nandos Open Letter OWAP</p>
+                </div>
+
+              </div>
+            </div>
+
+            <button class="vs-btn vs-next" type="button" aria-label="Next video">›</button>
+          </div>
+
+          <div class="vs-dots" aria-label="Slider dots"></div>
+        </div>
+      </section>
+
       <!-- ===== Portfolio Content ===== -->
-      <div class="PortfolioContent">
+      <div class="gallery">
+        <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768395913/Deda_vczya8.png" alt="Samthing Soweto - Deda" />
+        <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217519/Kwesta_ft_Wale_-_Spirit_pdvcrz.jpg" alt="Cover art for Kwesta ft Wale - Spirit" />
+        <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768395876/Bab_Motha_n16bfa.jpg" alt="BabMotha" />
+        <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768395890/BBT_w4klr3.jpg" alt="The Big Bro Theory" />
         <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217890/outlaws_S2_Showmax_Series_jytdw7.png" alt="">
         <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217906/Mkhize_to_Masemola_Showmax_Movie_ux08cr.png" alt="">
         <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217939/Abo_Mkhulu_Movie_dz3mbp.jpg" alt="">
@@ -53,71 +175,122 @@
         <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217520/Una_Rams_-_Bebe_y8t3op.jpg" alt="">
       </div>
 
-      <!-- ===== Videos Section ===== -->
-      <section class="VideoSection">
-        <h2>Advertisements</h2>
-        <div class="VideoContent">
-
-          <div class="plyr__video-embed">
-          <iframe width="350" height="200"
-              src="https://www.youtube.com/embed/xWyXW8s_Rp8"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-          </iframe>
-          </div>
-          <br>
-
-          <div class="plyr__video-embed">
-          <iframe width="350" height="200" 
-          src="https://www.youtube.com/embed/85_I3SGIY1o?si=08iMLSKXrKpJG92l" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerpolicy="strict-origin-when-cross-origin" 
-          allowfullscreen>
-          </iframe>
-          </div>
-
-        </div>
-      </section>
-
     </div>
 
-    <!-- ===== Scroll-Hide Nav Script ===== -->
     <script>
-    // Scroll-hide nav
-    const nav = document.querySelector("nav");
-    let prevScrollPos = window.pageYOffset;
+      document.addEventListener("DOMContentLoaded", () => {
+        // Scroll-hide nav
+        const nav = document.querySelector("nav");
+        let prevScrollPos = window.pageYOffset;
 
-    window.addEventListener("scroll", () => {
-      let currentScrollPos = window.pageYOffset;
-      if (prevScrollPos < currentScrollPos && currentScrollPos > 50) {
-        // Scrolling down - hide nav
-        nav.style.top = "-200px";
-      } else {
-        // Scrolling up - show nav
-        nav.style.top = "0";
-      }
-      prevScrollPos = currentScrollPos;
-    });
+        window.addEventListener("scroll", () => {
+          const currentScrollPos = window.pageYOffset;
+          nav.style.top = (prevScrollPos < currentScrollPos && currentScrollPos > 50) ? "-200px" : "0";
+          prevScrollPos = currentScrollPos;
+        });
 
-    // Toggle nav links on mobile
-    const toggleBtn = document.querySelector(".nav-toggle");
-    const navLinks = document.querySelector(".nav-links");
+        // Toggle nav links on mobile
+        const toggleBtn = document.querySelector(".nav-toggle");
+        const navLinks = document.querySelector(".nav-links");
+        toggleBtn.addEventListener("click", () => {
+          toggleBtn.classList.toggle("active");
+          navLinks.classList.toggle("active");
+        });
 
-    toggleBtn.addEventListener("click", () => {
-      toggleBtn.classList.toggle("active");
-      navLinks.classList.toggle("active");
-    });
-  </script>
+        // Plyr init (same behavior as your index page)
+        document.querySelectorAll('.plyr__video-embed').forEach(p => {
+          new Plyr(p, {
+            controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen']
+          });
+        });
 
-  <script>
-  const players = Array.from(document.querySelectorAll('.plyr__video-embed')).map(p => new Plyr(p, {
-    controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen']
-  }));
-</script>
+        // ===== Slider (mobile only) =====
+        const viewport = document.querySelector('.video-scroll .vs-viewport');
+        const track = document.querySelector('.video-scroll .vs-track');
+        const slides = Array.from(document.querySelectorAll('.video-scroll .vs-slide'));
+        const dotsWrap = document.querySelector('.video-scroll .vs-dots');
+        const prevBtn = document.querySelector('.video-scroll .vs-prev');
+        const nextBtn = document.querySelector('.video-scroll .vs-next');
+
+        if (!viewport || !track || slides.length === 0 || !dotsWrap) return;
+
+        let index = 0;
+
+        function isMobile() {
+          return window.innerWidth <= 768;
+        }
+
+        function go(i) {
+          index = (i + slides.length) % slides.length;
+
+          // pixel-based sliding = immune to padding/width rules
+          const w = viewport.getBoundingClientRect().width;
+          track.style.transform = `translateX(-${index * w}px)`;
+
+          dotsWrap.querySelectorAll('button').forEach((b, n) => {
+            b.classList.toggle('active', n === index);
+          });
+        }
+
+        function buildDots() {
+          dotsWrap.innerHTML = '';
+          slides.forEach((_, i) => {
+            const b = document.createElement('button');
+            b.type = 'button';
+            if (i === 0) b.classList.add('active');
+            b.addEventListener('click', () => go(i));
+            dotsWrap.appendChild(b);
+          });
+        }
+
+        function enableSlider() {
+          buildDots();
+          go(0);
+
+          prevBtn.addEventListener('click', () => go(index - 1));
+          nextBtn.addEventListener('click', () => go(index + 1));
+
+          // swipe
+          let startX = 0;
+          viewport.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+          }, { passive: true });
+
+          viewport.addEventListener('touchend', (e) => {
+            const endX = e.changedTouches[0].clientX;
+            if (startX - endX > 50) go(index + 1);
+            else if (endX - startX > 50) go(index - 1);
+          }, { passive: true });
+        }
+
+        function disableSlider() {
+          track.style.transform = '';
+          dotsWrap.innerHTML = '';
+        }
+
+        let enabled = false;
+
+        function sync() {
+          if (isMobile()) {
+            if (!enabled) {
+              enableSlider();
+              enabled = true;
+            } else {
+              // keep alignment correct on resize/orientation changes
+              go(index);
+            }
+          } else {
+            if (enabled) {
+              disableSlider();
+              enabled = false;
+            }
+          }
+        }
+
+        sync();
+        window.addEventListener('resize', sync);
+      });
+    </script>
+
   </body>
 </html>
-

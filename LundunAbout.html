@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | John Lundun</title>
+  <link rel="stylesheet" href="style.css?v=3" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" id="Logo">
+        <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217916/Logo-removebg_yygqpd.png" alt="John Lundun Logo" />
+      </a>
+
+      <!-- Toggle button with spans for animation -->
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="LundunPortfolio.html">Works</a></li>
+        <li><a href="LundunAbout.html" id="Selected">About Us</a></li>
+        <li><a href="LundunContact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="Headline">
+      <p>John Lundun is a SAMA-Nominated artist and SAMA-winning music producer and composer, specializing in creating iconic sound for major brands, television, and film. With a professional foundation from a Damelin College certificate in Contemporary Music and a TUT Diploma in Jazz & Popular Music, Lundun expertly bridges artistic innovation and commercial excellence.</p>
+      <h1>Music Composition & Final Mix Engineering for Brands & TV</h1>
+      <p>Lundun Audio is the creative force behind memorable and effective TV themes and sonic branding for premier clients including Nando’s, Game Stores, Tropika, Sony Music, the JSE and MSM Property Fund. His expertise ensures that every project is not just heard, but felt driving engagement and brand identity through impeccable composition, sound design.</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Lundun Inc.</p>
+  </footer>
+
+  <script>
+    // Scroll-hide nav
+    const nav = document.querySelector("nav");
+    let prevScrollPos = window.pageYOffset;
+
+    window.addEventListener("scroll", () => {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollPos < currentScrollPos && currentScrollPos > 50) {
+        // Scrolling down - hide nav
+        nav.style.top = "-200px";
+      } else {
+        // Scrolling up - show nav
+        nav.style.top = "0";
+      }
+      prevScrollPos = currentScrollPos;
+    });
+
+    // Toggle nav links on mobile
+    const toggleBtn = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggleBtn.addEventListener("click", () => {
+      toggleBtn.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>

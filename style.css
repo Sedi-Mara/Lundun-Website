@@ -282,7 +282,7 @@ iframe {
 }
 
 
-/* Optional: also round the outer Plyr container */
+
 .plyr {
   border-radius: 12px;
   overflow: hidden; 
@@ -401,7 +401,7 @@ iframe {
 }
 
 .ContactBtn:hover {
-  background-color: var(--accent-color);
+  background-color: #b0b0b0 ;
   transform: scale(1.05);
 }
 
@@ -420,10 +420,10 @@ iframe {
 
 .hero {
   width: 100%;
-  height: 400px; /* Fixed height for hero blocks */
-  color: white; /* Text color is white by default */
+  height: 400px; 
+  color: white; 
   text-align: center;
-  line-height: initial; /* This will vertically align the heading in the middle of each hero block */
+  line-height: initial; 
   position: relative;
   top: 50%;
  
@@ -435,8 +435,8 @@ iframe {
 .hero > h2 {
       /* Remove default margins for cleaner look */
     height: 20%;
-    top: 50%;   /* Sets the height of heading equal to its parent (hero) and allows it to adjust based on content inside it */
-    margin-top: 10%; /* Negative margin equal to half the height to perfectly center it vertically */;
+    top: 50%;   
+    margin-top: 10%; 
     margin-bottom: 2px;
 }
 
@@ -461,8 +461,7 @@ iframe {
   background-size: cover;
   width: 60%;
   margin-top: 30px;
-  background-color: rgba(0,0,0,0.4); /* dark layer */
-  background-blend-mode: multiply;   /* blends color with image */
+  background-color: rgba(0,0,0,0.4); 
 }
 
 .hero2 {
@@ -472,8 +471,7 @@ iframe {
   -o-background-size: cover;
   background-size: cover;
   width: 60%;
-  background-color: rgba(0,0,0,0.4); /* dark layer */
-  background-blend-mode: multiply;   /* blends color with image */
+  background-color: rgba(0,0,0,0.4); 
 }
 
 .hero3 {
@@ -492,8 +490,7 @@ iframe {
   -o-background-size: cover;
   background-size: cover;
   width: 60%;
-   background-color: rgba(0,0,0,0.4); /* dark layer */
-  background-blend-mode: multiply;   /* blends color with image */
+   background-color: rgba(0,0,0,0.4); 
 }
 
 .hero {
@@ -502,6 +499,185 @@ iframe {
   animation: fadeSlideUp 1s ease-out forwards;
   animation-delay: var(--delay, 0s);
 }
+
+
+/* =========================================================
+   ABOUT PAGE STYLES
+   ========================================================= */
+
+.about-page{
+  width: 100%;
+  padding-top: 10rem; 
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.about-hero{
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2.25rem 1.5rem;
+  background: rgba(0,0,0,0.55);
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+}
+
+.about-kicker{
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin-bottom: 0.75rem;
+}
+
+.about-hero h1{
+  font-size: 2.6rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.about-lede{
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+
+.about-section{
+  margin: 22px auto;
+  padding: 32px 34px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  max-width: 1100px;
+}
+
+.about-section h2{
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.about-section p{
+  font-size: 1.05rem;
+  opacity: 0.95;
+  margin-top: 0;
+  margin-bottom: 18px;         /* space before logos */
+  max-width: 95ch;
+}
+
+/* Logo strip */
+.about-logos{
+  display:flex;
+  flex-wrap:wrap;
+  gap:28px;
+  align-items:center;
+  justify-content:flex-start;
+  margin-top:14px;
+}
+
+.about-logo{
+  height:58px;
+  width:auto;
+  opacity:0.9;
+}
+
+/* SVG logos → white */
+.about-logo.mono{
+  filter: brightness(0) invert(1);
+}
+
+/* SAMA PNG */
+.about-logo.sama {
+  filter: invert(1);
+  height:48px;
+}
+
+
+.about-logo.sama,
+.about-logo.damelin,
+.about-logo.tut,
+.about-logo.game,
+.about-logo.clover,
+.about-logo.sony {
+  height: 80px;
+}
+
+.about-logo.netflix,
+.about-logo.apple,
+.about-logo.showmax {
+  height: 56px;
+}
+
+/* Force mono for stubborn SVGs (Game, Clover) 
+.about-logo.game,
+.about-logo.clover {
+  filter: brightness(0) saturate(100%) invert(1);
+} */
+
+
+
+
+
+.about-logo:hover{
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* Optional: artist pills */
+.about-pilllist{
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.about-pill{
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.35);
+  padding: 0.4rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+/* CTA spacing */
+.about-cta{
+  margin: 3rem 0 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px){
+  .about-page{
+    padding-top: 4rem; /* your nav becomes static on mobile in your existing CSS */
+  }
+
+  .about-hero{
+    padding: 1.75rem 1.1rem;
+  }
+
+  .about-hero h1{
+    font-size: 2.05rem;
+  }
+
+  .about-section{
+    padding: 1.5rem 1.1rem;
+  }
+
+  .about-logo{
+    height: 28px;
+    max-width: 140px;
+  }
+}
+
+/* If you ever switch this page to a LIGHT section background,
+   replace the logo filter with the line below:
+   filter: grayscale(100%) brightness(0);
+*/
+
 
 
 /* ===== Footer ===== */
@@ -833,6 +1009,150 @@ footer {
   width: 100%;
   margin-top: 0.5rem;
 }
+
+/* 
+   ABOUT PAGE – SPACING TUNING
+    */
+
+.about-section{
+  padding: 32px 34px;
+  margin: 22px auto;
+  max-width: 1100px;
+}
+
+.about-section h2{
+  margin-bottom: 12px;
+}
+
+.about-section p{
+  margin-top: 0;
+  margin-bottom: 18px;
+  max-width: 95ch;
+}
+
+/* Logo row spacing */
+.about-logos{
+  margin-top: 14px;
+  gap: 26px;
+  row-gap: 14px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-logos img{
+  display: block;
+}
+
+/* Mobile tuning */
+@media (max-width: 768px){
+  .about-section{
+    padding: 22px 18px;
+    margin: 16px 12px;
+  }
+
+  .about-logos{
+    margin-top: 12px;
+    gap: 30px;
+    row-gap: 12px;
+    justify-content: center;
+  }
+
+  .about-logo{
+    height: 56px;
+  }
+}
+
+/* ================================
+   MOBILE: Reduce nav-to-content gap
+   (Home, Portfolio, Contact)
+   ================================ */
+
+@media (max-width: 768px){
+
+  /* Headlines right under nav */
+  .Headline,
+  .ContactHeadline{
+    padding-top: 2rem; /* was effectively ~10rem */
+  }
+
+  /* Home page hero text block */
+  #TitleDes{
+    margin-top: 0.2rem;
+  }
+
+  /* Portfolio page */
+  .video-scroll{
+    margin-top: 1rem;
+  }
+
+  /* Contact page */
+  .contact-section{
+    margin-top: 3rem; /* down from 8–10rem */
+  }
+}
+
+/* ================================
+   PORTFOLIO: smoother mobile slider
+   ================================ */
+@media (max-width: 768px){
+
+  .video-scroll .gallery{
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 0;                 /* avoid weird snap offsets */
+  }
+
+  .video-scroll .gallery > .plyr__video-embed{
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+
+  /* Hide scrollbar */
+  .video-scroll .gallery::-webkit-scrollbar{
+    display: none;
+  }
+  .video-scroll .gallery{
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+/* ================================
+   ABOUT transitions
+   ================================ */
+
+.about-page .about-hero,
+.about-page .about-section,
+.about-page .about-cta {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 700ms ease, transform 700ms cubic-bezier(.22,.61,.36,1);
+  will-change: opacity, transform;
+}
+
+.about-page .is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .about-page .about-hero,
+  .about-page .about-section,
+  .about-page .about-cta {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+
+
+
 
 
 

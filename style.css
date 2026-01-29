@@ -462,6 +462,7 @@ iframe {
   width: 60%;
   margin-top: 30px;
   background-color: rgba(0,0,0,0.4); 
+  background-blend-mode: multiply;
 }
 
 .hero2 {
@@ -472,6 +473,7 @@ iframe {
   background-size: cover;
   width: 60%;
   background-color: rgba(0,0,0,0.4); 
+  background-blend-mode: multiply;
 }
 
 .hero3 {
@@ -481,6 +483,7 @@ iframe {
   -o-background-size: cover;
   background-size: cover;
   width: 60%;
+  background-blend-mode: multiply;
 }
 
 .hero4 {
@@ -491,6 +494,7 @@ iframe {
   background-size: cover;
   width: 60%;
    background-color: rgba(0,0,0,0.4); 
+   background-blend-mode: multiply;
 }
 
 .hero {
@@ -498,6 +502,7 @@ iframe {
   transform: translateY(40px);
   animation: fadeSlideUp 1s ease-out forwards;
   animation-delay: var(--delay, 0s);
+  
 }
 
 

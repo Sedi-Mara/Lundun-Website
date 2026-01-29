@@ -1,46 +1,139 @@
+<!-- === LundunAbout.html === -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | John Lundun</title>
-  <link rel="stylesheet" href="style.css?v=3" />
+  <title>About | John Lundun</title>
+
+  <!-- Fonts (match your index) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=2" />
 </head>
+
 <body>
+  <div class="container">
 
-  <header>
-    <nav>
-      <a href="index.html" id="Logo">
-        <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217916/Logo-removebg_yygqpd.png" alt="John Lundun Logo" />
-      </a>
+    <!-- ===== Navigation (same pattern as your other pages) ===== -->
+    <header>
+      <nav>
+        <a href="index.html" id="Logo">
+          <img src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1768217916/Logo-removebg_yygqpd.png" alt="John Lundun Logo" />
+        </a>
 
-      <!-- Toggle button with spans for animation -->
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
 
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="LundunPortfolio.html">Works</a></li>
-        <li><a href="LundunAbout.html" id="Selected">About Us</a></li>
-        <li><a href="LundunContact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="LundunPortfolio.html">Works</a></li>
+          <li><a href="LundunAbout.html" id="Selected">About</a></li>
+          <li><a href="LundunContact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <article class="Headline">
-      <p>John Lundun is a SAMA-Nominated artist and SAMA-winning music producer and composer, specializing in creating iconic sound for major brands, television, and film. With a professional foundation from a Damelin College certificate in Contemporary Music and a TUT Diploma in Jazz & Popular Music, Lundun expertly bridges artistic innovation and commercial excellence.</p>
-      <h1>Music Composition & Final Mix Engineering for Brands & TV</h1>
-      <p>Lundun Audio is the creative force behind memorable and effective TV themes and sonic branding for premier clients including Nando’s, Game Stores, Tropika, Sony Music, the JSE and MSM Property Fund. His expertise ensures that every project is not just heard, but felt driving engagement and brand identity through impeccable composition, sound design.</p>
-    </article>
-  </main>
+    <main class="about-page">
+      <!-- ===== Hero ===== -->
+      <section class="about-hero">
+        <p class="about-kicker">About</p>
+        <h1>John Lundun</h1>
+        <p class="about-lede">
+          John Lundun is a SAMA-Nominated artist and SAMA-winning music producer and composer, specializing in creating iconic sound for major brands, television, and film.
+          With a professional foundation from a Damelin College certificate in Contemporary Music and a TUT Diploma in Jazz &amp; Popular Music, Lundun expertly bridges artistic innovation and commercial excellence.
+        </p>
+      </section>
 
-  <footer>
-    <p>&copy; 2026 Lundun Inc.</p>
-  </footer>
+      <!-- ===== Section 1 ===== -->
+      <section class="about-section">
+        <h2>Industry Recognition &amp; Academic Foundation</h2>
+        <p>
+          SAMA-Nominated artist and SAMA-winning music producer and composer with a professional foundation from a Damelin College certificate in Contemporary Music and a
+          TUT Diploma in Jazz &amp; Popular Music — bridging artistic innovation and commercial excellence.
+        </p>
+
+        <!-- Logo strip -->
+        <div class="about-logos" aria-label="Awards and education logos">
+          <img class="about-logo mono sama"
+              src="https://res.cloudinary.com/dtl8l1au7/image/upload/e_bgremoval,f_png/v1769687948/SAMA31-Black-1_pw9qog.png"
+              alt="SAMA Award"
+              loading="lazy">
+
+
+          <img class="about-logo mono tut"
+              src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1769688143/Tshwane_University_of_Technology_logo_pgzlfz.svg"
+              alt="Tshwane University of Technology"
+              loading="lazy">
+
+          <img class="about-logo mono damelin"
+              src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1769687880/Damelin_logo_and_motto_kmp0bv.svg"
+              alt="Damelin College"
+              loading="lazy">
+        </div>
+
+      </section>
+
+      <!-- ===== Section 2 ===== -->
+      <section class="about-section">
+        <h2>Music Composition &amp; Final Mix Engineering for Brands &amp; TV</h2>
+        <p>
+          Lundun Audio is the creative force behind memorable and effective TV themes and sonic branding for premier clients including Nando’s, Game Stores, Tropika,
+          Sony Music, the JSE and MSM Property Fund. His expertise ensures that every project is not just heard, but felt — driving engagement and brand identity through
+          impeccable composition and sound design.
+        </p>
+
+        <div class="about-logos" aria-label="Brand logos">
+          <!-- Replace with your client/brand logo assets -->
+          <img class="about-logo" src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1769688113/Nando_s_wordmark_lm0bkq.svg" alt="Nando's" loading="lazy">
+          <img class="about-logo game" src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1769687891/game-seeklogo_ge4nxz.svg" alt="Game" loading="lazy">
+          <img class="about-logo clover" src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1769688006/clover-logo-2024_pn9cxk.svg" alt="Clover" loading="lazy">
+          <img class="about-logo mono sony" src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1769689262/Sony_Music_Entertainment_Logo_2023_bjwrqr.svg" alt="Sony Music" loading="lazy">
+          <img class="about-logo mono" src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1769688881/JSE_jnd0zs.svg" alt="JSE" loading="lazy">
+          <img class="about-logo mono" src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1769689468/msmlogoweb_imegdw.png" alt="MSM Property Fund" loading="lazy">
+        </div>
+      </section>
+
+      <!-- ===== Section 3 ===== -->
+      <section class="about-section">
+        <h2>A Trusted Collaborator to South Africa’s Music Elite</h2>
+        <p>
+          With a versatile, genre-spanning expertise, Lundun has produced, composed, and engineered alongside an illustrious roster of top South African artists.
+          His collaborative credits include: K.O, Kabza De Small, Kwesta, Jesse Clegg, Manana, Samthing Soweto, Msaki, Berita, Ndlovu Youth Choir, Sun El Musician,
+          Thando Zide, Simphiwe Dana, and many more.
+        </p>
+
+       
+      </section>
+
+      <!-- ===== Section 4 ===== -->
+      <section class="about-section">
+        <h2>Innovator in Sound: From Lo-Fiano to Film Scores</h2>
+        <p>
+          Pioneering the new genre Lo-Fiano (a fusion of Amapiano and Lofi) in collaboration with Apple Music, Lundun is at the forefront of musical trends.
+          His scoring credentials for film and TV such as Outlaws, Piano Love on Netflix, Mpondoland, and Mkhize to Masemola highlight his ability to craft compelling
+          narratives and emotional depth through music.
+        </p>
+
+        <div class="about-logos" aria-label="Platform and broadcaster logos">
+          <img class="about-logo mono" src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1769687975/Apple_Music_logo_v0jczr.svg" alt="Apple Music" loading="lazy">
+          <img class="about-logo mono" src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1769687905/Netflix_2015_logo_lcb5y2.svg" alt="Netflix" loading="lazy">
+          <img class="about-logo mono" src="https://res.cloudinary.com/dtl8l1au7/image/upload/v1769687920/Self_service_showmax_logo_new_fitu3q.svg" alt="Showmax" loading="lazy">
+        </div>
+      </section>
+
+      <div class="about-cta">
+        <a href="LundunContact.html" class="ContactBtn">Work With Lundun</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Lundun Inc.</p>
+    </footer>
+  </div>
 
   <script>
     // Scroll-hide nav
@@ -50,10 +143,8 @@
     window.addEventListener("scroll", () => {
       let currentScrollPos = window.pageYOffset;
       if (prevScrollPos < currentScrollPos && currentScrollPos > 50) {
-        // Scrolling down - hide nav
         nav.style.top = "-200px";
       } else {
-        // Scrolling up - show nav
         nav.style.top = "0";
       }
       prevScrollPos = currentScrollPos;
@@ -68,6 +159,37 @@
       navLinks.classList.toggle("active");
     });
   </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(
+      ".about-page .about-hero, .about-page .about-section, .about-page .about-cta"
+    );
+
+    // Fallback: if IntersectionObserver isn't available, just show everything
+    if (!("IntersectionObserver" in window)) {
+      items.forEach(el => el.classList.add("is-visible"));
+      return;
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target); // reveal once
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -10% 0px"
+      }
+    );
+
+    items.forEach(el => io.observe(el));
+  });
+</script>
 
 </body>
 </html>

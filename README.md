@@ -6,13 +6,13 @@ This project involved designing and implementing a responsive website to showcas
 
 ---
 
-## 🌐 Live Website
+## Live Website
 
 https://lundunaudio.com
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 The Lundun Audio website was created to provide a professional online presence for the client, allowing visitors to learn about the brand, explore services, and easily get in touch.
 
@@ -26,7 +26,7 @@ The focus of the project was on:
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - HTML5
 - CSS3
@@ -36,7 +36,7 @@ The focus of the project was on:
 
 ---
 
-## ✨ Features
+## Features
 
 - Fully responsive layout for desktop and mobile devices
 - Structured content layout for easy navigation
@@ -46,7 +46,7 @@ The focus of the project was on:
 
 ---
 
-## 🧠 What I Learned
+## What I Learned
 
 This project helped strengthen my skills in:
 
@@ -58,5 +58,24 @@ This project helped strengthen my skills in:
 
 ---
 
-## 📂 Project Structure
-# Lundun-Website
+
+## Future Improvements
+
+Possible improvements that could be added in the future:
+
+- Improved SEO optimization
+- Audio player integration
+- Performance optimization
+- Content management system (CMS) integration
+- Analytics integration
+
+---
+
+## Author
+
+Lesedi Marakalala
+
+IT Support | Cybersecurity | Python | Cloud (Azure Fundamentals)
+
+LinkedIn:  
+https://linkedin.com/in/lesedi-marakalala-6ba35a18b
